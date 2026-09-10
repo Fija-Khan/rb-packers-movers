@@ -1,0 +1,377 @@
+/* =================================
+   RB ENTERPRISES
+   HERO SECTION
+   Midnight Black + Lime
+================================= */
+
+.hero {
+  width: 100%;
+  min-height: calc(100vh - 75px);
+  background: #0d0f0e;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle Lime Glow */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  top: -180px;
+  right: -120px;
+  background: rgba(183, 214, 58, 0.06);
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 70px 50px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =================================
+   HERO TEXT
+================================= */
+
+.hero-text {
+  width: 100%;
+}
+
+.hero-brand {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #b7d63a;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.hero-text h1 {
+  margin: 0;
+  max-width: 700px;
+  color: #f5f5f5;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.04;
+  font-weight: 800;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.hero-text h1 span {
+  color: #b7d63a;
+}
+
+
+/* =================================
+   SERVICES
+================================= */
+
+.hero-services {
+  max-width: 650px;
+  margin: 28px 0 0;
+  color: #cfcfcf;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.hero-services span {
+  color: #b7d63a;
+  margin: 0 5px;
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.hero-btn {
+  min-height: 48px;
+  padding: 13px 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: #b7d63a;
+  color: #0d0f0e;
+  border: 1px solid #b7d63a;
+}
+
+.primary-btn:hover {
+  background: #cce94b;
+  border-color: #cce94b;
+  color: #0d0f0e;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.secondary-btn:hover {
+  color: #b7d63a;
+  border-color: #b7d63a;
+  transform: translateY(-2px);
+}
+
+
+/* =================================
+   BANNER
+================================= */
+
+.hero-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid rgba(183, 214, 58, 0.25);
+}
+
+
+/* =================================
+   LARGE LAPTOP
+   1200px
+================================= */
+
+@media (max-width: 1200px) {
+  .hero-content {
+    padding: 60px 40px;
+    gap: 45px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(40px, 5vw, 62px);
+  }
+
+  .hero-services {
+    font-size: 15px;
+  }
+}
+
+
+/* =================================
+   TABLET
+   992px
+================================= */
+
+@media (max-width: 992px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 65px 35px 70px;
+  }
+
+  .hero-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: clamp(42px, 7vw, 62px);
+  }
+
+  .hero-services {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-banner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero-banner img {
+    max-width: 100%;
+  }
+}
+
+
+/* =================================
+   SMALL TABLET
+   768px
+================================= */
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 55px 25px 60px;
+    gap: 38px;
+  }
+
+  .hero-brand {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(36px, 8vw, 52px);
+    letter-spacing: -1px;
+  }
+
+  .hero-services {
+    margin-top: 22px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    margin-top: 28px;
+  }
+}
+
+
+/* =================================
+   MOBILE
+   600px
+================================= */
+
+@media (max-width: 600px) {
+  .hero-content {
+    padding: 48px 20px 50px;
+    gap: 32px;
+  }
+
+  .hero-brand {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    margin-bottom: 16px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(31px, 9vw, 43px);
+    line-height: 1.08;
+  }
+
+  .hero-services {
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .hero-banner img {
+    border-radius: 6px;
+  }
+}
+
+
+/* =================================
+   SMALL MOBILE
+   480px
+================================= */
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 42px 16px 45px;
+    gap: 28px;
+  }
+
+  .hero-brand {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .hero-services {
+    font-size: 12px;
+  }
+
+  .hero-btn {
+    font-size: 11px;
+    padding: 12px 18px;
+  }
+}
+
+
+/* =================================
+   VERY SMALL MOBILE
+   380px
+================================= */
+
+@media (max-width: 380px) {
+  .hero-content {
+    padding: 38px 14px 40px;
+  }
+
+  .hero-brand {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .hero-text h1 {
+    font-size: 27px;
+  }
+
+  .hero-services {
+    font-size: 11px;
+  }
+}
