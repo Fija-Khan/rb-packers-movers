@@ -5,32 +5,37 @@ const services = [
   {
     number: "01",
     title: "HOME SHIFTING",
+    image: "/images/home-shifting.jpg",
     description:
-      "Complete house shifting support including packing, labour and transportation for a smooth moving process.",
+      "Complete home shifting support with careful packing, loading, transportation and unloading.",
   },
   {
     number: "02",
     title: "FULL PACKING",
+    image: "/images/full-packing.jpg",
     description:
-      "Careful packing support for household and other belongings before the shifting process.",
+      "Professional packing support to keep your household belongings protected during the move.",
   },
   {
     number: "03",
     title: "LABOUR SERVICE",
+    image: "/images/labour-service.jpg",
     description:
-      "Labour support for loading, unloading and handling your belongings during shifting.",
+      "Reliable labour support for loading, unloading and careful handling of your belongings.",
   },
   {
     number: "04",
     title: "TRANSPORTATION",
+    image: "/images/transportation.jpg",
     description:
-      "Transportation support for moving your belongings from the pickup location to the destination.",
+      "Safe transportation support for moving your belongings from pickup location to destination.",
   },
   {
     number: "05",
-    title: "ALL INDIA SERVICE",
+    title: "WAREHOUSE",
+    image: "/images/warehouse.jpg",
     description:
-      "Shifting services available across India for home, office and company relocation requirements.",
+      "Convenient warehouse support for storing your belongings during the shifting process.",
   },
 ];
 
@@ -38,40 +43,54 @@ const Services = () => {
   return (
     <section className="services-section" id="services">
       <div className="services-container">
-        {/* Section Heading */}
-        <div className="services-header">
+
+        {/* Center Heading */}
+        <div className="services-heading">
           <span className="services-label">OUR SERVICES</span>
 
           <h2>
-            HOME • OFFICE •
+            MOVING MADE
             <br />
-            <span>COMPANY SHIFTING</span>
+            <span>SIMPLE &amp; SAFE</span>
           </h2>
 
           <p>
-            We provide home, office and company shifting services with packing,
-            labour and transportation support across India.
+            From packing your belongings to delivering them safely,
+            we provide complete moving support for homes, offices
+            and companies across India.
           </p>
         </div>
 
-        {/* Services */}
+        {/* Services Cards */}
         <div className="services-grid">
           {services.map((service) => (
             <div className="service-card" key={service.number}>
-              <div className="service-top">
-                <span className="service-number">{service.number}</span>
+
+              {/* Image */}
+              <div className="service-image">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                />
+
+                <span className="service-number">
+                  {service.number}
+                </span>
 
                 <span className="service-arrow">↗</span>
               </div>
 
-              <div className="service-line"></div>
+              {/* Content */}
+              <div className="service-content">
+                <h3>{service.title}</h3>
 
-              <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
 
-              <p>{service.description}</p>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

@@ -5,9 +5,13 @@ const About = () => {
   return (
     <section className="about-section" id="about">
       <div className="about-container">
+
         {/* Left - Company Photo */}
         <div className="about-image">
-          <img src="/images/about-us.jpg" alt="Packers and Movers" />
+          <img
+            src="/images/about-us.jpg"
+            alt="R B Enterprises Packers and Movers"
+          />
         </div>
 
         {/* Right - About Content */}
@@ -21,17 +25,25 @@ const About = () => {
           </h2>
 
           <p className="about-intro">
-            With 6 years of experience in house shifting, we provide packing,
-            labour and transportation services across India.
+            With 6 years of experience in shifting services, R B Enterprises
+            provides home, office and company shifting solutions along with
+            packing, labour, transportation and warehouse services.
           </p>
 
           <p>
             Our team focuses on careful packing, proper handling and smooth
-            transportation of household belongings. We aim to make the shifting
-            process simple and convenient for every customer.
+            transportation of belongings. From home shifting to office and
+            company relocation, we aim to make the moving process simple,
+            organized and convenient for every customer.
           </p>
 
-          {/* Real Company Highlights */}
+          <p>
+            We also provide warehouse services for customers who need a
+            convenient space to store their belongings during the shifting
+            process.
+          </p>
+
+          {/* Company Highlights */}
           <div className="about-info">
             <div className="about-info-item">
               <strong>6+</strong>
@@ -44,6 +56,7 @@ const About = () => {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

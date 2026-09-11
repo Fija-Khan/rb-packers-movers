@@ -27,6 +27,8 @@ function Navbar() {
           <a href="/">Home</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
+          <a href="#why-us">Why Choose Us</a>
+
           <a href="#quote">Get Free Quote</a>
           <a href="#contact">Contact</a>
         </nav>

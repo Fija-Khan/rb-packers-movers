@@ -10,7 +10,7 @@ const Hero = () => {
 
           <h3>
             <span>•</span> HOME <span>•</span> OFFICE
-            <span>•</span> COMPANY SHIFTING
+            <span>•</span> COMPANY SHIFTING <br /> <span>•</span> WAREHOUSE
           </h3>
 
           <p className="hero-services">
