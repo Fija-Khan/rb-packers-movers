@@ -13,6 +13,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 /* Subtle Lime Glow */
@@ -29,19 +30,23 @@
   pointer-events: none;
 }
 
+/* =================================
+   HERO CONTENT
+================================= */
+
 .hero-content {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 70px 50px;
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   align-items: center;
   gap: 60px;
   position: relative;
   z-index: 1;
+  box-sizing: border-box;
 }
-
 
 /* =================================
    HERO TEXT
@@ -49,6 +54,7 @@
 
 .hero-text {
   width: 100%;
+  min-width: 0;
 }
 
 .hero-brand {
@@ -70,12 +76,12 @@
   font-weight: 800;
   letter-spacing: -2px;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 
 .hero-text h1 span {
   color: #b7d63a;
 }
-
 
 /* =================================
    SERVICES
@@ -96,7 +102,6 @@
   margin: 0 5px;
 }
 
-
 /* =================================
    BUTTONS
 ================================= */
@@ -106,11 +111,12 @@
   align-items: center;
   gap: 14px;
   margin-top: 34px;
+  flex-wrap: wrap;
 }
 
 .hero-btn {
   min-height: 48px;
-  padding: 13px 25px;
+  padding: 0 24px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -121,6 +127,8 @@
   letter-spacing: 1.2px;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .primary-btn {
@@ -148,13 +156,13 @@
   transform: translateY(-2px);
 }
 
-
 /* =================================
    BANNER
 ================================= */
 
 .hero-banner {
   width: 100%;
+  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,8 +176,8 @@
   object-fit: contain;
   border-radius: 8px;
   border: 1px solid rgba(183, 214, 58, 0.25);
+  box-sizing: border-box;
 }
-
 
 /* =================================
    LARGE LAPTOP
@@ -191,7 +199,6 @@
   }
 }
 
-
 /* =================================
    TABLET
    992px
@@ -205,7 +212,7 @@
   .hero-content {
     grid-template-columns: 1fr;
     gap: 45px;
-    padding: 65px 35px 70px;
+    padding: 60px 35px 65px;
   }
 
   .hero-text {
@@ -236,10 +243,10 @@
   }
 
   .hero-banner img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 700px;
   }
 }
-
 
 /* =================================
    SMALL TABLET
@@ -248,7 +255,7 @@
 
 @media (max-width: 768px) {
   .hero-content {
-    padding: 55px 25px 60px;
+    padding: 50px 25px 55px;
     gap: 38px;
   }
 
@@ -260,6 +267,7 @@
 
   .hero-text h1 {
     font-size: clamp(36px, 8vw, 52px);
+    line-height: 1.06;
     letter-spacing: -1px;
   }
 
@@ -272,8 +280,12 @@
   .hero-buttons {
     margin-top: 28px;
   }
-}
 
+  .hero-btn {
+    min-height: 46px;
+    padding: 0 22px;
+  }
+}
 
 /* =================================
    MOBILE
@@ -282,7 +294,7 @@
 
 @media (max-width: 600px) {
   .hero-content {
-    padding: 48px 20px 50px;
+    padding: 45px 20px 50px;
     gap: 32px;
   }
 
@@ -295,6 +307,7 @@
   .hero-text h1 {
     font-size: clamp(31px, 9vw, 43px);
     line-height: 1.08;
+    letter-spacing: -0.5px;
   }
 
   .hero-services {
@@ -313,13 +326,19 @@
   .hero-btn {
     width: 100%;
     min-height: 46px;
+    padding: 0 18px;
+  }
+
+  .hero-banner {
+    width: 100%;
   }
 
   .hero-banner img {
+    width: 100%;
+    max-width: 100%;
     border-radius: 6px;
   }
 }
-
 
 /* =================================
    SMALL MOBILE
@@ -328,7 +347,7 @@
 
 @media (max-width: 480px) {
   .hero-content {
-    padding: 42px 16px 45px;
+    padding: 40px 16px 45px;
     gap: 28px;
   }
 
@@ -346,11 +365,11 @@
   }
 
   .hero-btn {
+    min-height: 44px;
     font-size: 11px;
-    padding: 12px 18px;
+    padding: 0 16px;
   }
 }
-
 
 /* =================================
    VERY SMALL MOBILE
@@ -359,12 +378,13 @@
 
 @media (max-width: 380px) {
   .hero-content {
-    padding: 38px 14px 40px;
+    padding: 36px 14px 40px;
+    gap: 26px;
   }
 
   .hero-brand {
     font-size: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 1.8px;
   }
 
   .hero-text h1 {
@@ -373,5 +393,11 @@
 
   .hero-services {
     font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .hero-btn {
+    min-height: 42px;
+    font-size: 10px;
   }
 }
