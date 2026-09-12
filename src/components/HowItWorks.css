@@ -1,0 +1,146 @@
+.how-section {
+  width: 100%;
+  padding: 90px 20px;
+  background: #111412;
+  color: #f4f5f0;
+}
+
+.how-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.how-heading {
+  max-width: 720px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.how-tag {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #b7d63a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.how-heading h2 {
+  margin: 0 0 16px;
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.how-heading h2 span {
+  color: #b7d63a;
+}
+
+.how-heading p {
+  margin: 0;
+  color: #aeb4ad;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Cards */
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.how-card {
+  position: relative;
+  padding: 32px 26px;
+  min-height: 240px;
+  background: #151816;
+  border: 1px solid rgba(183, 214, 58, 0.16);
+  border-radius: 14px;
+  transition: 0.3s ease;
+}
+
+.how-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(183, 214, 58, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Step Number */
+
+.step-number {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border: 1px solid #b7d63a;
+  border-radius: 50%;
+
+  color: #b7d63a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Content */
+
+.how-card h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #f4f5f0;
+}
+
+.how-card p {
+  margin: 0;
+  color: #aeb4ad;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .how-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .how-heading h2 {
+    font-size: 36px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .how-section {
+    padding: 70px 16px;
+  }
+
+  .how-heading {
+    margin-bottom: 40px;
+  }
+
+  .how-heading h2 {
+    font-size: 30px;
+  }
+
+  .how-heading p {
+    font-size: 15px;
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .how-card {
+    min-height: auto;
+    padding: 26px 22px;
+  }
+}

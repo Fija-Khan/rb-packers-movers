@@ -3,6 +3,8 @@ import Hero from "./components/Hero";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import WhyChooseUs from "./components/WhyChooseUs";
+import GetFreeQuote from "./components/GetFreeQuote";
+import HowItWorks from "./components/HowItWorks";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <About />
       <Services />
       <WhyChooseUs />
+      <GetFreeQuote/>
+      <HowItWorks/>
     </>
   );
 }
