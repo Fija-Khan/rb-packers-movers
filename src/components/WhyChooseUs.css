@@ -6,18 +6,33 @@
 ================================= */
 
 .why-section {
+  position: relative;
+
   width: 100%;
+  max-width: 100%;
+
   padding: 115px 0;
+
   background: #0d0f0e;
   color: #ffffff;
+
   overflow: hidden;
+  box-sizing: border-box;
 }
+
+/* =================================
+   CONTAINER
+================================= */
 
 .why-container {
   width: 100%;
   max-width: 1100px;
+
   margin: 0 auto;
   padding: 0 40px;
+
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 /* =================================
@@ -25,8 +40,15 @@
 ================================= */
 
 .why-content {
+  width: 100%;
   max-width: 900px;
+
   margin: 0 auto;
+
+  box-sizing: border-box;
+  min-width: 0;
+
+  overflow-wrap: break-word;
 }
 
 /* =================================
@@ -35,6 +57,7 @@
 
 .why-label {
   display: inline-block;
+
   margin-bottom: 20px;
 
   color: #b7d63a;
@@ -49,17 +72,22 @@
 ================================= */
 
 .why-content h2 {
+  width: 100%;
+  max-width: 100%;
+
   margin: 0;
 
   color: #f5f5f5;
 
   font-size: clamp(46px, 5.5vw, 70px);
   line-height: 0.98;
-
   font-weight: 800;
   letter-spacing: -3px;
 
   text-transform: uppercase;
+
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .why-content h2 span {
@@ -71,6 +99,7 @@
 ================================= */
 
 .why-content > p {
+  width: 100%;
   max-width: 820px;
 
   margin: 28px 0 0;
@@ -80,6 +109,8 @@
   font-size: 15px;
   line-height: 1.9;
   font-weight: 400;
+
+  overflow-wrap: break-word;
 }
 
 .why-content > p + p {
@@ -91,8 +122,11 @@
 ================================= */
 
 .why-highlight {
-  margin-top: 42px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
 
+  margin-top: 42px;
   padding-top: 28px;
 
   display: flex;
@@ -101,22 +135,29 @@
   gap: 20px;
 
   border-top: 1px solid rgba(183, 214, 58, 0.25);
+
+  box-sizing: border-box;
 }
 
 .why-highlight > span {
+  flex-shrink: 0;
+
   color: #b7d63a;
 
   font-size: 48px;
   line-height: 1;
-
   font-weight: 800;
 }
 
 .why-highlight div {
+  min-width: 0;
+
   display: flex;
   flex-direction: column;
 
   gap: 5px;
+
+  box-sizing: border-box;
 }
 
 .why-highlight strong {
@@ -124,17 +165,23 @@
 
   font-size: 13px;
   font-weight: 800;
-
   letter-spacing: 1.5px;
+
+  overflow-wrap: break-word;
 }
 
 .why-highlight p {
+  width: 100%;
+  max-width: 100%;
+
   margin: 0;
 
   color: #777c79;
 
   font-size: 12px;
   line-height: 1.5;
+
+  overflow-wrap: break-word;
 }
 
 /* =================================
@@ -153,11 +200,19 @@
 
   font-size: 240px;
   line-height: 1;
-
   font-weight: 900;
   letter-spacing: -15px;
 
   pointer-events: none;
+
+  z-index: 0;
+}
+
+/* Keep actual content above background decoration */
+
+.why-container {
+  position: relative;
+  z-index: 1;
 }
 
 /* =================================
@@ -194,10 +249,14 @@
   }
 
   .why-container {
+    width: 100%;
+    max-width: 100%;
+
     padding: 0 30px;
   }
 
   .why-content {
+    width: 100%;
     max-width: 800px;
   }
 
@@ -231,6 +290,9 @@
   }
 
   .why-container {
+    width: 100%;
+    max-width: 100%;
+
     padding: 0 25px;
   }
 
@@ -241,13 +303,24 @@
     letter-spacing: 2.5px;
   }
 
+  .why-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .why-content h2 {
+    width: 100%;
+    max-width: 100%;
+
     font-size: clamp(38px, 8vw, 52px);
     line-height: 1;
     letter-spacing: -1.8px;
   }
 
   .why-content > p {
+    width: 100%;
+    max-width: 100%;
+
     margin-top: 22px;
 
     font-size: 13px;
@@ -259,8 +332,12 @@
   }
 
   .why-highlight {
+    width: 100%;
+    max-width: 100%;
+
     margin-top: 32px;
     padding-top: 23px;
+
     gap: 16px;
   }
 
@@ -278,6 +355,7 @@
 
   .why-section::after {
     font-size: 150px;
+
     right: -15px;
     bottom: -35px;
   }
@@ -294,6 +372,9 @@
   }
 
   .why-container {
+    width: 100%;
+    max-width: 100%;
+
     padding: 0 20px;
   }
 
@@ -323,6 +404,9 @@
   }
 
   .why-container {
+    width: 100%;
+    max-width: 100%;
+
     padding: 0 16px;
   }
 
@@ -350,6 +434,7 @@
   .why-highlight {
     margin-top: 27px;
     padding-top: 20px;
+
     gap: 13px;
   }
 
@@ -383,6 +468,9 @@
   }
 
   .why-container {
+    width: 100%;
+    max-width: 100%;
+
     padding: 0 14px;
   }
 
@@ -393,6 +481,10 @@
   .why-content > p {
     font-size: 11.5px;
     line-height: 1.7;
+  }
+
+  .why-highlight {
+    gap: 10px;
   }
 
   .why-highlight > span {

@@ -32,8 +32,8 @@ const Hero = () => {
 
         <div className="hero-banner">
           <img
-            src="/images/rb-banner.jpg"
-            alt="R B Enterprises - Home Office Company Shifting"
+            src={`${import.meta.env.BASE_URL}images/rb-banner.jpg`}
+            alt="RB Packers and Movers"
           />
         </div>
       </div>

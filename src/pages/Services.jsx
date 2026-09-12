@@ -1,43 +1,45 @@
 import React from "react";
 import "./Services.css";
 
+
 const services = [
   {
     number: "01",
     title: "HOME SHIFTING",
-    image: "/images/home-shifting.jpg",
+    image: `${import.meta.env.BASE_URL}images/home-shifting.jpg`,
     description:
       "Complete home shifting support with careful packing, loading, transportation and unloading.",
   },
   {
     number: "02",
     title: "FULL PACKING",
-    image: "/images/full-packing.jpg",
+    image: `${import.meta.env.BASE_URL}images/full-packing.jpg`,
     description:
       "Professional packing support to keep your household belongings protected during the move.",
   },
   {
     number: "03",
     title: "LABOUR SERVICE",
-    image: "/images/labour-service.jpg",
+    image: `${import.meta.env.BASE_URL}images/labour-service.jpg`,
     description:
       "Reliable labour support for loading, unloading and careful handling of your belongings.",
   },
   {
     number: "04",
     title: "TRANSPORTATION",
-    image: "/images/transportation.jpg",
+    image: `${import.meta.env.BASE_URL}images/transportation.jpg`,
     description:
       "Safe transportation support for moving your belongings from pickup location to destination.",
   },
   {
     number: "05",
     title: "WAREHOUSE",
-    image: "/images/warehouse.jpg",
+    image: `${import.meta.env.BASE_URL}images/warehouse.jpg`,
     description:
       "Convenient warehouse support for storing your belongings during the shifting process.",
   },
 ];
+
 
 const Services = () => {
   return (
