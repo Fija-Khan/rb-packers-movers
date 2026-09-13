@@ -52,7 +52,7 @@ function Footer() {
           </p>
 
           <a
-            href="https://wa.me/919999999999"
+            href="https://wa.me/919730730292"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-whatsapp"
