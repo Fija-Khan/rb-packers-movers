@@ -21,6 +21,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 70px 28px 55px;
+
   box-sizing: border-box;
 
   display: grid;
@@ -113,7 +114,9 @@
   font-size: 14px;
   font-weight: 500;
 
-  transition: all 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .footer-column a:hover {
@@ -134,39 +137,149 @@
 }
 
 /* =================================
-   WHATSAPP BUTTON
+   CONTACT EMAIL
 ================================= */
 
-.footer-whatsapp {
-  display: inline-flex !important;
+.footer-contact-link {
+  display: flex !important;
+  align-items: flex-start;
+
+  gap: 9px;
+
+  width: fit-content;
+}
+
+.footer-contact-link svg {
+  flex-shrink: 0;
+
+  margin-top: 4px;
+
+  color: #b7d63a;
+  font-size: 13px;
+}
+
+.footer-contact-link span {
+  line-height: 1.5;
+}
+
+/* =================================
+   ADDRESS
+================================= */
+
+.footer-address {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  margin-bottom: 14px !important;
+}
+
+.footer-address svg {
+  flex-shrink: 0;
+
+  margin-top: 5px;
+
+  color: #b7d63a;
+
+  font-size: 13px;
+}
+
+/* =================================
+   GOOGLE MAPS
+================================= */
+
+.footer-map {
+  display: flex !important;
+
   align-items: center;
-  justify-content: center;
+
+  gap: 9px;
 
   width: fit-content;
 
-  margin-top: 5px;
-  padding: 10px 18px;
+  margin-top: 0;
 
-  color: #ffffff !important;
-  background: #198754;
-
-  border: 1px solid #198754;
-  border-radius: 7px;
+  color: #b7d63a !important;
 
   font-size: 13px !important;
   font-weight: 700 !important;
-
-  transition: all 0.3s ease !important;
 }
 
-.footer-whatsapp:hover {
-  color: #ffffff !important;
-  background: #157347;
-  border-color: #157347;
+.footer-map svg {
+  flex-shrink: 0;
 
-  transform: translateY(-2px) !important;
+  font-size: 13px;
+}
 
-  box-shadow: 0 7px 20px rgba(25, 135, 84, 0.25);
+.footer-map:hover {
+  color: #d4ed6a !important;
+
+  transform: translateX(5px);
+}
+
+/* =================================
+   SOCIAL MEDIA ICONS
+================================= */
+
+.footer-contact-social {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 6px;
+
+  padding-top: 8px;
+}
+
+.footer-contact-social a {
+  width: 38px;
+  height: 38px;
+
+  margin: 0 !important;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(183, 214, 58, 0.35);
+
+  border-radius: 50%;
+
+  background: rgba(183, 214, 58, 0.04);
+
+  color: #aeb2ae;
+
+  font-size: 16px;
+
+  box-sizing: border-box;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.footer-contact-social a:hover {
+  color: #0d0f0e;
+
+  background: #b7d63a;
+
+  border-color: #b7d63a;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 6px 18px rgba(183, 214, 58, 0.18);
+}
+
+.footer-contact-social a svg {
+  display: block;
 }
 
 /* =================================
@@ -184,6 +297,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 
   display: flex;
+
   align-items: center;
   justify-content: space-between;
 
@@ -194,7 +308,9 @@
   margin: 0;
 
   color: #777b77;
+
   font-size: 12px;
+
   line-height: 1.6;
 }
 
@@ -205,6 +321,7 @@
 @media (max-width: 1000px) {
   .footer-container {
     grid-template-columns: 1.4fr 1fr 1fr;
+
     gap: 40px;
 
     padding: 60px 24px 45px;
@@ -212,6 +329,7 @@
 
   .footer-brand {
     grid-column: 1 / -1;
+
     max-width: 600px;
   }
 
@@ -245,10 +363,23 @@
     font-size: 15px;
   }
 
+  .footer-column a,
+  .footer-column p {
+    font-size: 13px;
+  }
+
+  .footer-contact-social a {
+    width: 36px;
+    height: 36px;
+
+    font-size: 15px;
+  }
+
   .footer-bottom {
     width: calc(100% - 40px);
 
     flex-direction: column;
+
     align-items: flex-start;
 
     gap: 6px;
@@ -274,16 +405,19 @@
 
   .footer-brand h2 {
     font-size: 18px;
+
     letter-spacing: 1px;
   }
 
   .footer-tagline {
     font-size: 10px !important;
+
     letter-spacing: 1.6px;
   }
 
   .footer-brand > p:last-child {
     font-size: 13px;
+
     line-height: 1.75;
   }
 
@@ -296,8 +430,29 @@
     font-size: 13px;
   }
 
-  .footer-whatsapp {
-    padding: 10px 16px;
+  .footer-contact-link {
+    max-width: 100%;
+  }
+
+  .footer-contact-link span {
+    overflow-wrap: anywhere;
+  }
+
+  .footer-map {
+    font-size: 12px !important;
+  }
+
+  .footer-contact-social {
+    gap: 10px;
+
+    margin-top: 5px;
+  }
+
+  .footer-contact-social a {
+    width: 35px;
+    height: 35px;
+
+    font-size: 14px;
   }
 
   .footer-bottom {
@@ -329,7 +484,15 @@
 
   .footer-tagline {
     font-size: 9px !important;
+
     letter-spacing: 1.2px;
+  }
+
+  .footer-contact-social a {
+    width: 34px;
+    height: 34px;
+
+    font-size: 13px;
   }
 
   .footer-bottom {

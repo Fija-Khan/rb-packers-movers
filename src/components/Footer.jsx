@@ -1,5 +1,13 @@
 import "./Footer.css";
 
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaYoutube,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+
 function Footer() {
   return (
     <footer className="footer">
@@ -8,9 +16,11 @@ function Footer() {
         {/* Company */}
         <div className="footer-column footer-brand">
           <h2>R B PACKERS AND MOVERS</h2>
+
           <p className="footer-tagline">
             HOME • OFFICE • COMPANY SHIFTING
           </p>
+
           <p>
             Reliable packing and moving services with experienced staff
             and smart packing solutions across India.
@@ -20,6 +30,7 @@ function Footer() {
         {/* Quick Links */}
         <div className="footer-column">
           <h3>Quick Links</h3>
+
           <a href="#home">Home</a>
           <a href="#about">About Us</a>
           <a href="#services">Services</a>
@@ -29,40 +40,92 @@ function Footer() {
         {/* Services */}
         <div className="footer-column">
           <h3>Our Services</h3>
+
           <a href="#services">Home Shifting</a>
           <a href="#services">Full Packing</a>
-          <a href="#services">Labour</a>
+          <a href="#services">Labour Service</a>
           <a href="#services">Transportation</a>
+          <a href="#services">Warehouse</a>
         </div>
 
-        {/* Contact */}
+        {/* Contact Us */}
         <div className="footer-column">
           <h3>Contact Us</h3>
 
-          <a href="tel:+919999999999">
-            📞 Call Us
+          {/* Email */}
+          <a
+            href="mailto:rbenterprises8171@gmail.com"
+            className="footer-contact-link"
+          >
+            <FaEnvelope />
+            <span>rbenterprises8171@gmail.com</span>
           </a>
 
-          <a href="mailto:rbenterprises8171@gmail.com">
-            ✉ rbenterprises8171@gmail.com
-          </a>
+          {/* Address */}
+          <p className="footer-address">
+            <FaMapMarkerAlt />
 
-          <p>
-            📍 Padgha, Maharashtra
+            <span>
+              SHOP NO 1, QURBAIYA FARM,
+              <br />
+              Mumbai Nashik Highway,
+              <br />
+              Near Padgha Toll Plaza,
+              <br />
+              421101
+            </span>
           </p>
 
+          {/* Google Maps */}
           <a
-            href="https://wa.me/919730730292"
+            href="https://share.google/m0dJydTzzMdPHavvk"
             target="_blank"
             rel="noopener noreferrer"
-            className="footer-whatsapp"
+            className="footer-map"
           >
-            WhatsApp Us
+            <FaMapMarkerAlt />
+            <span>View on Google Maps</span>
           </a>
+
+          {/* Social Media Icons */}
+          <div className="footer-contact-social">
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/rbshaikhsahab?utm_source=qr&stkn=MWp3MmQ2bmVzMTRzMA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
+
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/share/17Yqp9t2XB/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebookF />
+            </a>
+
+            {/* YouTube */}
+            <a
+              href="https://youtube.com/@rbpackersandmovers?si=U2vhBTqplsb8CBIR"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
+              <FaYoutube />
+            </a>
+
+          </div>
         </div>
 
       </div>
 
+      {/* Bottom */}
       <div className="footer-bottom">
         <p>
           © 2026 R B Packers & Movers. All Rights Reserved.
