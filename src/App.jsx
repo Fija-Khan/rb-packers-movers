@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import WhyChooseUs from "./components/WhyChooseUs";
 import GetFreeQuote from "./components/GetFreeQuote";
 import HowItWorks from "./components/HowItWorks";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <WhyChooseUs />
       <GetFreeQuote/>
       <HowItWorks/>
+      <Footer />
     </>
   );
 }

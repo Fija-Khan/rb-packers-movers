@@ -5,11 +5,10 @@ const About = () => {
   return (
     <section className="about-section" id="about">
       <div className="about-container">
-
         {/* Left - Company Photo */}
         <div className="about-image">
           <img
-            src="/images/about-us.jpg"
+            src={`${import.meta.env.BASE_URL}images/about-us.jpg`}
             alt="R B Enterprises Packers and Movers"
           />
         </div>
@@ -56,7 +55,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
