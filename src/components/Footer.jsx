@@ -66,7 +66,7 @@ function Footer() {
             <FaMapMarkerAlt />
 
             <span>
-              SHOP NO 1, QURBAIYA FARM,
+              SHOP NO 1, qurbaniya farm,
               <br />
               Mumbai Nashik Highway,
               <br />

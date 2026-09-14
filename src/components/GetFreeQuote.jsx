@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./GetFreeQuote.css";
+import axios from "axios";
 
 const GetFreeQuote = () => {
   const [formData, setFormData] = useState({
@@ -30,12 +31,54 @@ const GetFreeQuote = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Quote Request:", formData);
+    try {
+      const data = new FormData();
 
-    alert("Thank you! Your quote request has been submitted.");
+      data.append("name", formData.name);
+      data.append("phone", formData.phone);
+      data.append("pickup_pin", formData.pickupPin);
+      data.append("drop_pin", formData.dropPin);
+      data.append("pickup_floor", formData.pickupFloor);
+      data.append("drop_floor", formData.dropFloor);
+      data.append("lift_available", formData.liftAvailable);
+      data.append("items", formData.items);
+
+      formData.files.forEach((file) => {
+        data.append("files", file);
+      });
+
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/enquiries/create/",
+        data
+      );
+
+      console.log("Enquiry submitted successfully:", response.data);
+
+      alert("Thank you! Your quote request has been submitted.");
+
+      setFormData({
+        name: "",
+        phone: "",
+        pickupPin: "",
+        dropPin: "",
+        pickupFloor: "",
+        dropFloor: "",
+        liftAvailable: "",
+        items: "",
+        files: [],
+      });
+    } catch (error) {
+      console.error("Enquiry submission error:", error);
+
+      if (error.response) {
+        console.error("Server response:", error.response.data);
+      }
+
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -210,6 +253,7 @@ const GetFreeQuote = () => {
                       checked={formData.liftAvailable === "Yes"}
                       onChange={handleChange}
                     />
+
                     <span>Yes</span>
                   </label>
 
@@ -221,6 +265,7 @@ const GetFreeQuote = () => {
                       checked={formData.liftAvailable === "No"}
                       onChange={handleChange}
                     />
+
                     <span>No</span>
                   </label>
 
@@ -233,6 +278,7 @@ const GetFreeQuote = () => {
               <h3>Moving Items</h3>
 
               <div className="form-group full-width">
+
                 <label htmlFor="items">
                   Tell Us About Your Items
                 </label>
@@ -245,6 +291,7 @@ const GetFreeQuote = () => {
                   value={formData.items}
                   onChange={handleChange}
                 />
+
               </div>
             </div>
 
@@ -264,6 +311,7 @@ const GetFreeQuote = () => {
                 />
 
                 <label htmlFor="files" className="upload-label">
+
                   <span className="upload-icon">+</span>
 
                   <strong>Upload Photos or Videos</strong>
@@ -271,6 +319,7 @@ const GetFreeQuote = () => {
                   <small>
                     Add photos/videos of your सामान for a more accurate quote.
                   </small>
+
                 </label>
 
               </div>
@@ -285,7 +334,11 @@ const GetFreeQuote = () => {
 
             {/* Submit */}
             <div className="quote-submit">
-              <button type="submit" className="quote-btn">
+
+              <button
+                type="submit"
+                className="quote-btn"
+              >
                 Get My Free Quote
                 <span>→</span>
               </button>
@@ -293,6 +346,7 @@ const GetFreeQuote = () => {
               <p>
                 Our team will contact you after receiving your enquiry.
               </p>
+
             </div>
 
           </form>
