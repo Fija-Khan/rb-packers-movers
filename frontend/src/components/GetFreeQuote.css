@@ -1,0 +1,482 @@
+/* =================================
+   RB PACKERS & MOVERS
+   GET FREE QUOTE PAGE
+   Midnight Black + Lime Theme
+================================= */
+
+.quote-section {
+  width: 100%;
+  min-height: 100vh;
+  background: #0d0f0e;
+  color: #f4f5f0;
+  padding: 90px 20px;
+  box-sizing: border-box;
+}
+
+/* =================================
+   CONTAINER
+================================= */
+
+.quote-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =================================
+   HEADING
+================================= */
+
+.quote-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 45px;
+}
+
+.quote-tag {
+  display: inline-block;
+  color: #b7d63a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 14px;
+}
+
+.quote-heading h2 {
+  margin: 0;
+  color: #f4f5f0;
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.quote-heading h2 span {
+  color: #b7d63a;
+}
+
+.quote-heading p {
+  margin: 18px auto 0;
+  max-width: 650px;
+  color: #aeb3ad;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =================================
+   FORM CARD
+================================= */
+
+.quote-card {
+  width: 100%;
+  background: #151816;
+  border: 1px solid rgba(183, 214, 58, 0.18);
+  border-radius: 14px;
+  padding: 38px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* =================================
+   FORM SECTION
+================================= */
+
+.form-section {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.form-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-section h3 {
+  margin: 0 0 22px;
+  color: #f4f5f0;
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: 0.2px;
+}
+
+/* =================================
+   FORM GRID
+================================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+.form-grid:last-child {
+  margin-bottom: 0;
+}
+
+/* =================================
+   FORM GROUP
+================================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+.form-group label {
+  color: #dfe3dc;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.form-group label span {
+  color: #b7d63a;
+}
+
+/* =================================
+   INPUT / SELECT / TEXTAREA
+================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 7px;
+  background: #0f1210;
+  color: #f4f5f0;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.form-group input,
+.form-group select {
+  height: 48px;
+  padding: 0 14px;
+}
+
+.form-group textarea {
+  min-height: 125px;
+  padding: 14px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* Placeholder */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #777d76;
+}
+
+/* Select */
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group select option {
+  background: #151816;
+  color: #f4f5f0;
+}
+
+/* Focus */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #b7d63a;
+  box-shadow: 0 0 0 3px rgba(183, 214, 58, 0.08);
+}
+
+/* =================================
+   RADIO BUTTONS
+================================= */
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  min-height: 48px;
+}
+
+.radio-option {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 9px;
+  color: #dfe3dc !important;
+  cursor: pointer;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.radio-option input {
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  padding: 0;
+  accent-color: #b7d63a;
+  cursor: pointer;
+}
+
+/* =================================
+   FILE UPLOAD
+================================= */
+
+.upload-box {
+  position: relative;
+  width: 100%;
+  min-height: 155px;
+  border: 1px dashed rgba(183, 214, 58, 0.45);
+  border-radius: 10px;
+  background: rgba(183, 214, 58, 0.025);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.upload-box:hover {
+  border-color: #b7d63a;
+  background: rgba(183, 214, 58, 0.05);
+}
+
+.upload-box input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  inset: 0;
+  z-index: 2;
+}
+
+.upload-label {
+  width: 100%;
+  min-height: 155px;
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.upload-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  border: 1px solid rgba(183, 214, 58, 0.5);
+  border-radius: 50%;
+  color: #b7d63a;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.upload-label strong {
+  color: #f4f5f0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.upload-label small {
+  margin-top: 7px;
+  color: #858b84;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.file-count {
+  margin: 12px 0 0;
+  color: #b7d63a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =================================
+   SUBMIT AREA
+================================= */
+
+.quote-submit {
+  text-align: center;
+  padding-top: 8px;
+}
+
+.quote-btn {
+  min-width: 220px;
+  min-height: 50px;
+  padding: 0 24px;
+  border: 1px solid #b7d63a;
+  border-radius: 7px;
+  background: #b7d63a;
+  color: #0d0f0e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quote-btn span {
+  font-size: 19px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.quote-btn:hover {
+  background: transparent;
+  color: #b7d63a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(183, 214, 58, 0.15);
+}
+
+.quote-btn:hover span {
+  transform: translateX(4px);
+}
+
+.quote-submit p {
+  margin: 14px 0 0;
+  color: #777d76;
+  font-size: 12px;
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 900px) {
+  .quote-section {
+    padding: 75px 20px;
+  }
+
+  .quote-heading h2 {
+    font-size: 36px;
+  }
+
+  .quote-card {
+    padding: 30px;
+  }
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+  .quote-section {
+    padding: 65px 16px;
+  }
+
+  .quote-heading {
+    margin-bottom: 32px;
+  }
+
+  .quote-heading h2 {
+    font-size: 31px;
+  }
+
+  .quote-heading p {
+    font-size: 14px;
+  }
+
+  .quote-card {
+    padding: 24px 20px;
+    border-radius: 11px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  .form-section {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+
+  .form-section h3 {
+    font-size: 17px;
+    margin-bottom: 18px;
+  }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 520px) {
+  .quote-section {
+    padding: 55px 14px;
+  }
+
+  .quote-tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .quote-heading h2 {
+    font-size: 27px;
+  }
+
+  .quote-heading p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .quote-card {
+    padding: 22px 16px;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 46px;
+  }
+
+  .radio-group {
+    gap: 22px;
+  }
+
+  .upload-label {
+    padding: 20px 12px;
+  }
+
+  .quote-btn {
+    width: 100%;
+  }
+}
+
+/* =================================
+   VERY SMALL MOBILE
+================================= */
+
+@media (max-width: 360px) {
+  .quote-heading h2 {
+    font-size: 24px;
+  }
+
+  .quote-card {
+    padding: 20px 13px;
+  }
+
+  .radio-group {
+    gap: 16px;
+  }
+}

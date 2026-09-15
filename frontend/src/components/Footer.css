@@ -1,0 +1,452 @@
+
+/* =================================
+   RB PACKERS & MOVERS
+   FOOTER
+   Midnight Black + Lime Theme
+================================= */
+
+.footer {
+  width: 100%;
+  background: #0d0f0e;
+  color: #f4f5f0;
+
+  border-top: 1px solid rgba(183, 214, 58, 0.18);
+}
+
+
+/* =================================
+   FOOTER MAIN CONTAINER
+================================= */
+
+.footer-container {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding: 70px 28px 55px;
+
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 1.35fr 0.75fr 0.9fr 1.2fr;
+
+  gap: 55px;
+}
+
+
+/* =================================
+   COMMON FOOTER COLUMN
+================================= */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+/* =================================
+   BRAND
+================================= */
+
+.footer-brand h2 {
+  margin: 0 0 12px;
+
+  color: #f4f5f0;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.footer-tagline {
+  margin: 0 0 18px;
+
+  color: #b7d63a;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.footer-brand > p:last-child {
+  max-width: 330px;
+
+  margin: 0;
+
+  color: #8f958e;
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+
+/* =================================
+   COLUMN HEADINGS
+================================= */
+
+.footer-column h3 {
+  position: relative;
+
+  margin: 0 0 22px;
+
+  color: #f4f5f0;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+.footer-column h3::after {
+  content: "";
+
+  display: block;
+
+  width: 28px;
+  height: 2px;
+
+  margin-top: 9px;
+
+  background: #b7d63a;
+}
+
+
+/* =================================
+   FOOTER LINKS
+================================= */
+
+.footer-column > a:not(.footer-contact-link):not(.footer-map) {
+  position: relative;
+
+  margin-bottom: 13px;
+
+  color: #9da39b;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-column > a:not(.footer-contact-link):not(.footer-map):hover {
+  color: #b7d63a;
+
+  transform: translateX(4px);
+}
+
+
+/* =================================
+   CONTACT LINKS
+================================= */
+
+.footer-contact-link {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  margin-bottom: 13px;
+
+  color: #9da39b;
+
+  text-decoration: none;
+
+  font-size: 12.5px;
+
+  line-height: 1.5;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-contact-link svg {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  color: #b7d63a;
+
+  font-size: 13px;
+}
+
+.footer-contact-link:hover {
+  color: #b7d63a;
+
+  transform: translateX(3px);
+}
+
+
+/* =================================
+   ADDRESS
+================================= */
+
+.footer-address {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  margin: 5px 0 14px;
+
+  color: #9da39b;
+
+  font-size: 12.5px;
+
+  line-height: 1.7;
+}
+
+.footer-address svg {
+  flex-shrink: 0;
+
+  margin-top: 3px;
+
+  color: #b7d63a;
+
+  font-size: 13px;
+}
+
+
+/* =================================
+   GOOGLE MAP LINK
+================================= */
+
+.footer-map {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 2px;
+
+  color: #b7d63a;
+
+  text-decoration: none;
+
+  font-size: 12.5px;
+  font-weight: 700;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-map svg {
+  font-size: 13px;
+}
+
+.footer-map:hover {
+  color: #d0eb67;
+
+  transform: translateX(3px);
+}
+
+
+/* =================================
+   SOCIAL ICONS
+================================= */
+
+.footer-contact-social {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 22px;
+}
+
+.footer-contact-social a {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(183, 214, 58, 0.25);
+  border-radius: 7px;
+
+  background: #111412;
+
+  color: #b7d63a;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  transition: all 0.3s ease;
+}
+
+.footer-contact-social a:hover {
+  background: #b7d63a;
+
+  border-color: #b7d63a;
+
+  color: #0d0f0e;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 7px 18px rgba(183, 214, 58, 0.18);
+}
+
+
+/* =================================
+   FOOTER BOTTOM
+================================= */
+
+.footer-bottom {
+  width: 100%;
+
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding: 20px 28px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #70766f;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+.footer-bottom p:last-child {
+  text-align: right;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1000px) {
+
+  .footer-container {
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 45px;
+  }
+
+  .footer-brand {
+    max-width: 400px;
+  }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+
+    padding: 55px 20px 45px;
+  }
+
+  .footer-brand > p:last-child {
+    max-width: 500px;
+  }
+
+  .footer-column h3 {
+    margin-bottom: 18px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 20px;
+
+    gap: 7px;
+  }
+
+  .footer-bottom p:last-child {
+    text-align: left;
+  }
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+  .footer-container {
+    padding: 50px 16px 40px;
+
+    gap: 35px;
+  }
+
+  .footer-brand h2 {
+    font-size: 17px;
+
+    letter-spacing: 1.2px;
+  }
+
+  .footer-tagline {
+    font-size: 9px;
+
+    letter-spacing: 1.6px;
+  }
+
+  .footer-brand > p:last-child {
+    font-size: 12.5px;
+  }
+
+  .footer-bottom {
+    padding: 18px 16px;
+  }
+
+  .footer-bottom p {
+    font-size: 10.5px;
+  }
+}
+
+
+/* =================================
+   VERY SMALL MOBILE
+================================= */
+
+@media (max-width: 360px) {
+
+  .footer-brand h2 {
+    font-size: 15px;
+  }
+
+  .footer-contact-social a {
+    width: 34px;
+    height: 34px;
+  }
+}

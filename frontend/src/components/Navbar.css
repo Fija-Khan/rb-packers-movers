@@ -1,0 +1,573 @@
+/* =================================
+   RB PACKERS & MOVERS
+   Midnight Black + Lime Theme
+================================= */
+
+.navbar {
+  width: 100%;
+  background: #0d0f0e;
+  border-bottom: 1px solid rgba(183, 214, 58, 0.28);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  padding: 12px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+
+  box-sizing: border-box;
+}
+
+/* =================================
+   BRAND
+================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-text strong {
+  color: #f4f5f0;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.brand-text span {
+  color: #b7d63a;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 2.2px;
+  margin-top: 4px;
+}
+
+/* =================================
+   DESKTOP NAVIGATION
+================================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: #e8ebe5;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  padding: 8px 0;
+
+  transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #b7d63a;
+
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #b7d63a;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* =================================
+   DESKTOP ACTION BUTTONS
+================================= */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.call-button,
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+  padding: 0 17px;
+
+  border-radius: 7px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+/* Call */
+
+.call-button {
+  color: #b7d63a;
+  background: transparent;
+
+  border: 1px solid #b7d63a;
+}
+
+.call-button:hover {
+  color: #0d0f0e;
+  background: #b7d63a;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 22px rgba(183, 214, 58, 0.25);
+}
+
+/* WhatsApp */
+
+.whatsapp-button {
+  color: #ffffff;
+  background: #198754;
+
+  border: 1px solid #198754;
+}
+
+.whatsapp-button:hover {
+  background: #157347;
+  border-color: #157347;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 20px rgba(25, 135, 84, 0.25);
+}
+
+
+/* =================================
+   HAMBURGER
+   Hidden on Desktop
+================================= */
+
+.hamburger {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: 1px solid rgba(183, 214, 58, 0.45);
+  border-radius: 7px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 21px;
+  height: 2px;
+
+  background: #b7d63a;
+
+  border-radius: 10px;
+
+  transition: all 0.3s ease;
+}
+
+/* Hamburger → X */
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =================================
+   MOBILE SIDE MENU
+================================= */
+
+.mobile-menu {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 300px;
+  max-width: 82vw;
+  height: 100vh;
+
+  background: #111412;
+
+  border-right: 1px solid rgba(183, 214, 58, 0.25);
+
+  padding: 100px 24px 30px;
+
+  box-sizing: border-box;
+
+  transform: translateX(-100%);
+
+  transition: transform 0.35s ease;
+
+  z-index: 1050;
+
+  box-shadow: 15px 0 40px rgba(0, 0, 0, 0.4);
+
+  overflow-y: auto;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+
+/* =================================
+   MOBILE LINKS
+================================= */
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-links a {
+  position: relative;
+
+  padding: 17px 5px;
+
+  color: #f4f5f0;
+
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.25s ease;
+}
+
+.mobile-nav-links a::before {
+  content: "";
+
+  position: absolute;
+
+  left: -24px;
+  top: 0;
+
+  width: 3px;
+  height: 0;
+
+  background: #b7d63a;
+
+  transition: height 0.25s ease;
+}
+
+.mobile-nav-links a:hover {
+  color: #b7d63a;
+  padding-left: 12px;
+}
+
+.mobile-nav-links a:hover::before {
+  height: 100%;
+}
+
+
+/* =================================
+   MOBILE ACTIONS
+================================= */
+
+.mobile-actions {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.mobile-call-button,
+.mobile-whatsapp-button {
+  width: 100%;
+
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+
+/* Mobile Call */
+
+.mobile-call-button {
+  color: #b7d63a;
+
+  border: 1px solid #b7d63a;
+
+  background: transparent;
+}
+
+.mobile-call-button:hover {
+  color: #0d0f0e;
+  background: #b7d63a;
+}
+
+
+/* Mobile WhatsApp */
+
+.mobile-whatsapp-button {
+  color: #ffffff;
+
+  background: #198754;
+
+  border: 1px solid #198754;
+}
+
+.mobile-whatsapp-button:hover {
+  background: #157347;
+}
+
+
+/* =================================
+   DARK OVERLAY
+================================= */
+
+.menu-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.58);
+
+  z-index: 1020;
+
+  animation: fadeOverlay 0.3s ease;
+}
+
+@keyframes fadeOverlay {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1100px) {
+
+  .navbar-container {
+    padding: 11px 20px;
+    gap: 18px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+}
+
+
+/* =================================
+   SMALL TABLET
+================================= */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  .call-button,
+  .whatsapp-button {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+  .navbar-container {
+    padding: 10px 16px;
+  }
+
+  /* Hide desktop menu */
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  /* Show hamburger */
+
+  .hamburger {
+    display: flex;
+  }
+
+  .brand-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .brand-text strong {
+    font-size: 14px;
+  }
+
+  .brand-text span {
+    font-size: 10px;
+  }
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 520px) {
+
+  .navbar-container {
+    padding: 9px 14px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-text strong {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .brand-text span {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .hamburger {
+    width: 42px;
+    height: 42px;
+  }
+
+  .mobile-menu {
+    width: 285px;
+  }
+}
+
+
+/* =================================
+   VERY SMALL MOBILE
+================================= */
+
+@media (max-width: 360px) {
+
+  .brand-text {
+    display: none;
+  }
+
+  .brand-logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .mobile-menu {
+    width: 270px;
+  }
+}
