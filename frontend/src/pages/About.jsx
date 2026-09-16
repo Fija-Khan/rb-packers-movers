@@ -45,7 +45,7 @@ const About = () => {
           {/* Company Highlights */}
           <div className="about-info">
             <div className="about-info-item">
-              <strong>6+</strong>
+              <strong>6</strong>
               <span>YEARS EXPERIENCE</span>
             </div>
 

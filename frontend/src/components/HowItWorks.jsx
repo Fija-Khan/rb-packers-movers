@@ -25,7 +25,7 @@ const HowItWorks = () => {
       number: "04",
       title: "Safe Delivery",
       description:
-        "Your belongings are delivered safely to your new location.",
+        "Your belongings are delivered to your new location with proper handling.",
     },
   ];
 
@@ -41,15 +41,14 @@ const HowItWorks = () => {
           </h2>
 
           <p>
-            From enquiry to delivery, we make your shifting process simple,
-            organized and stress-free.
+            From enquiry to delivery, we keep your shifting process simple,
+            organized and convenient.
           </p>
         </div>
 
         <div className="how-grid">
           {steps.map((step) => (
             <div className="how-card" key={step.number}>
-
               <div className="step-number">
                 {step.number}
               </div>
@@ -57,7 +56,6 @@ const HowItWorks = () => {
               <h3>{step.title}</h3>
 
               <p>{step.description}</p>
-
             </div>
           ))}
         </div>

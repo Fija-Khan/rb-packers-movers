@@ -9,61 +9,52 @@ const Contact = () => {
     "Hello R B Packers & Movers, I would like to enquire about your packing and moving services."
   );
 
-  const googleMapsLink = "https://share.google/m0jDydTzzMdPHavvk";
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+  const googleMapsLink =
+    "https://share.google/m0jDydTzzMdPHavvk";
 
   return (
     <main className="contact-page">
 
-      {/* =========================
-          CONTACT HEADER
-      ========================= */}
+      {/* Contact Header */}
       <section className="contact-header">
         <div className="contact-header-content">
-          <span>CONTACT US</span>
+          <span className="contact-tag">CONTACT US</span>
 
           <h1>
             Get In <strong>Touch</strong>
           </h1>
 
           <p>
-            Have a question or planning a move? Contact R B Packers & Movers
-            and our team will be happy to assist you.
+            Planning a move? Get in touch with R B Packers & Movers
+            for packing, shifting, labour and transportation services.
           </p>
         </div>
       </section>
 
-      {/* =========================
-          CONTACT INFORMATION + MAP
-      ========================= */}
+      {/* Contact Content */}
       <section className="contact-main">
         <div className="contact-wrapper">
 
-          {/* =========================
-              LEFT — CONTACT INFO
-          ========================= */}
+          {/* Contact Information */}
           <div className="contact-info">
 
-            <span className="contact-section-label">
-              R B PACKERS & MOVERS
-            </span>
+            <div className="contact-title">
+              <span>R B PACKERS & MOVERS</span>
 
-            <h2>
-              Let’s Make Your
-              <strong> Move Easy.</strong>
-            </h2>
-
-            <p className="contact-intro">
-              We provide reliable packing, home shifting, labour and
-              transportation services across India.
-            </p>
+              <h2>
+                Contact <strong>Information</strong>
+              </h2>
+            </div>
 
             <div className="contact-list">
 
               {/* Address */}
-              <div className="contact-detail">
-                <div className="contact-detail-icon">📍</div>
+              <div className="contact-item">
+                <div className="contact-icon">📍</div>
 
-                <div>
+                <div className="contact-item-content">
                   <h3>Our Address</h3>
 
                   <p>
@@ -81,11 +72,11 @@ const Contact = () => {
               {/* Phone */}
               <a
                 href={`tel:${phoneNumber}`}
-                className="contact-detail contact-link"
+                className="contact-item contact-link"
               >
-                <div className="contact-detail-icon">📞</div>
+                <div className="contact-icon">📞</div>
 
-                <div>
+                <div className="contact-item-content">
                   <h3>Call Us</h3>
                   <p>+91 97307 30292</p>
                 </div>
@@ -93,14 +84,14 @@ const Contact = () => {
 
               {/* WhatsApp */}
               <a
-                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="contact-detail contact-link"
+                className="contact-item contact-link"
               >
-                <div className="contact-detail-icon">💬</div>
+                <div className="contact-icon">💬</div>
 
-                <div>
+                <div className="contact-item-content">
                   <h3>WhatsApp</h3>
                   <p>Chat with our team</p>
                 </div>
@@ -109,21 +100,21 @@ const Contact = () => {
               {/* Email */}
               <a
                 href="mailto:rbenterprises8171@gmail.com"
-                className="contact-detail contact-link"
+                className="contact-item contact-link"
               >
-                <div className="contact-detail-icon">✉</div>
+                <div className="contact-icon">✉</div>
 
-                <div>
+                <div className="contact-item-content">
                   <h3>Email Us</h3>
                   <p>rbenterprises8171@gmail.com</p>
                 </div>
               </a>
 
               {/* Service Area */}
-              <div className="contact-detail">
-                <div className="contact-detail-icon">🚚</div>
+              <div className="contact-item">
+                <div className="contact-icon">🚚</div>
 
-                <div>
+                <div className="contact-item-content">
                   <h3>Service Area</h3>
                   <p>All India</p>
                 </div>
@@ -131,42 +122,39 @@ const Contact = () => {
 
             </div>
 
-            {/* =========================
-                ACTION BUTTONS
-            ========================= */}
+            {/* Action Buttons */}
             <div className="contact-actions">
 
               <a
                 href={`tel:${phoneNumber}`}
                 className="contact-call-btn"
               >
-                Call Now
-                <span>→</span>
+                <span>Call Now</span>
+                <strong>→</strong>
               </a>
 
               <a
-                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-whatsapp-btn"
               >
-                WhatsApp
-                <span>→</span>
+                <span>WhatsApp</span>
+                <strong>→</strong>
               </a>
 
             </div>
-
           </div>
 
-          {/* =========================
-              RIGHT — GOOGLE MAP
-          ========================= */}
-          <div className="contact-map-wrapper">
+          {/* Location */}
+          <div className="contact-location">
 
-            <div className="contact-map-heading">
+            <div className="location-heading">
               <span>FIND US</span>
 
-              <h2>Our Location</h2>
+              <h2>
+                Our <strong>Location</strong>
+              </h2>
             </div>
 
             <div className="contact-map">
@@ -179,19 +167,25 @@ const Contact = () => {
               ></iframe>
             </div>
 
-            <p className="map-note">
-              📍 Padgha, Maharashtra - 421101
-            </p>
+            <div className="location-bottom">
+              <div className="location-address">
+                <span>📍</span>
 
-            <a
-              href={googleMapsLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="map-directions-btn"
-            >
-              Open in Google Maps
-              <span>↗</span>
-            </a>
+                <p>
+                  Padgha, Maharashtra - 421101
+                </p>
+              </div>
+
+              <a
+                href={googleMapsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="map-button"
+              >
+                Open in Google Maps
+                <strong>↗</strong>
+              </a>
+            </div>
 
           </div>
 

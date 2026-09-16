@@ -75,6 +75,9 @@ function Navbar() {
           <a href="#services" onClick={closeMenu}>
             Services
           </a>
+          <a href="#why-us" onClick={closeMenu}>
+            Why Choose Us
+          </a>
 
           <a href="#quote" onClick={closeMenu}>
             Get Free Quote

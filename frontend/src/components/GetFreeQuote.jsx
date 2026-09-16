@@ -64,7 +64,6 @@ const GetFreeQuote = () => {
       // WHATSAPP INTEGRATION
       // ==========================================
 
-      // RB Packers & Movers WhatsApp Number
       const whatsappNumber = "919730730292";
 
       const whatsappMessage = `
@@ -73,10 +72,12 @@ Hello R B Packers & Movers,
 I would like to get a free quote for my moving requirement.
 
 *Customer Details*
+
 Name: ${formData.name}
 Phone: ${formData.phone}
 
 *Moving Details*
+
 Pickup PIN: ${formData.pickupPin}
 Drop PIN: ${formData.dropPin}
 Pickup Floor: ${formData.pickupFloor || "Not specified"}
@@ -84,6 +85,7 @@ Drop Floor: ${formData.dropFloor || "Not specified"}
 Lift Available: ${formData.liftAvailable || "Not specified"}
 
 *Moving Items*
+
 ${formData.items || "Not specified"}
 
 Please provide me with a suitable quotation.
@@ -154,7 +156,6 @@ Thank you.
               <h3>Customer Details</h3>
 
               <div className="form-grid">
-
                 <div className="form-group">
                   <label htmlFor="name">
                     Full Name <span>*</span>
@@ -188,7 +189,6 @@ Thank you.
                     required
                   />
                 </div>
-
               </div>
             </div>
 
@@ -197,7 +197,6 @@ Thank you.
               <h3>Moving Details</h3>
 
               <div className="form-grid">
-
                 <div className="form-group">
                   <label htmlFor="pickupPin">
                     Pickup PIN Code <span>*</span>
@@ -233,15 +232,11 @@ Thank you.
                     required
                   />
                 </div>
-
               </div>
 
               <div className="form-grid">
-
                 <div className="form-group">
-                  <label htmlFor="pickupFloor">
-                    Pickup Floor
-                  </label>
+                  <label htmlFor="pickupFloor">Pickup Floor</label>
 
                   <select
                     id="pickupFloor"
@@ -261,9 +256,7 @@ Thank you.
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="dropFloor">
-                    Drop Floor
-                  </label>
+                  <label htmlFor="dropFloor">Drop Floor</label>
 
                   <select
                     id="dropFloor"
@@ -281,7 +274,6 @@ Thank you.
                     <option value="6th+ Floor">6th+ Floor</option>
                   </select>
                 </div>
-
               </div>
 
               {/* Lift Available */}
@@ -289,7 +281,6 @@ Thank you.
                 <label>Lift Available?</label>
 
                 <div className="radio-group">
-
                   <label className="radio-option">
                     <input
                       type="radio"
@@ -311,7 +302,6 @@ Thank you.
                     />
                     <span>No</span>
                   </label>
-
                 </div>
               </div>
             </div>
@@ -341,7 +331,6 @@ Thank you.
               <h3>Upload Photos / Videos</h3>
 
               <div className="upload-box">
-
                 <input
                   type="file"
                   id="files"
@@ -352,17 +341,15 @@ Thank you.
                 />
 
                 <label htmlFor="files" className="upload-label">
-
                   <span className="upload-icon">+</span>
 
                   <strong>Upload Photos or Videos</strong>
 
                   <small>
-                    Add photos/videos of your सामान for a more accurate quote.
+                    Add photos/videos of your belongings for a more accurate
+                    quote.
                   </small>
-
                 </label>
-
               </div>
 
               {formData.files.length > 0 && (
@@ -375,7 +362,6 @@ Thank you.
 
             {/* Submit */}
             <div className="quote-submit">
-
               <button
                 type="submit"
                 className="quote-btn"
@@ -387,7 +373,6 @@ Thank you.
               <p>
                 Our team will contact you after receiving your enquiry.
               </p>
-
             </div>
 
           </form>
