@@ -54,8 +54,8 @@ const GetFreeQuote = () => {
 
       // Submit enquiry to Django backend
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/enquiries/create/",
-        data
+        "https://rb-packers-movers.onrender.com/api/enquiries/create/",
+        data,
       );
 
       console.log("Enquiry submitted successfully:", response.data);
@@ -95,7 +95,7 @@ Thank you.
 
       // Create WhatsApp URL
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-        whatsappMessage
+        whatsappMessage,
       )}`;
 
       // Open WhatsApp
@@ -103,7 +103,7 @@ Thank you.
 
       // Success message
       alert(
-        "Thank you! Your quote request has been submitted. WhatsApp will open now."
+        "Thank you! Your quote request has been submitted. WhatsApp will open now.",
       );
 
       // Reset form
@@ -132,7 +132,6 @@ Thank you.
   return (
     <section className="quote-section" id="quote">
       <div className="quote-container">
-
         {/* Section Heading */}
         <div className="quote-heading">
           <span className="quote-tag">GET A FREE QUOTE</span>
@@ -142,15 +141,14 @@ Thank you.
           </h2>
 
           <p>
-            Share your moving details with us and our team will get back to
-            you with a suitable quotation.
+            Share your moving details with us and our team will get back to you
+            with a suitable quotation.
           </p>
         </div>
 
         {/* Quote Form */}
         <div className="quote-card">
           <form onSubmit={handleSubmit}>
-
             {/* Customer Details */}
             <div className="form-section">
               <h3>Customer Details</h3>
@@ -311,9 +309,7 @@ Thank you.
               <h3>Moving Items</h3>
 
               <div className="form-group full-width">
-                <label htmlFor="items">
-                  Tell Us About Your Items
-                </label>
+                <label htmlFor="items">Tell Us About Your Items</label>
 
                 <textarea
                   id="items"
@@ -362,19 +358,13 @@ Thank you.
 
             {/* Submit */}
             <div className="quote-submit">
-              <button
-                type="submit"
-                className="quote-btn"
-              >
+              <button type="submit" className="quote-btn">
                 Get My Free Quote
                 <span>→</span>
               </button>
 
-              <p>
-                Our team will contact you after receiving your enquiry.
-              </p>
+              <p>Our team will contact you after receiving your enquiry.</p>
             </div>
-
           </form>
         </div>
       </div>
