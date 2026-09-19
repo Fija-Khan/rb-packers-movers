@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary_storage.storage import MediaCloudinaryStorage
 
 
 class Enquiry(models.Model):
@@ -10,11 +11,9 @@ class Enquiry(models.Model):
     ]
 
     name = models.CharField(max_length=100)
-
     phone = models.CharField(max_length=15)
 
     pickup_pin = models.CharField(max_length=6)
-
     drop_pin = models.CharField(max_length=6)
 
     pickup_floor = models.CharField(
@@ -59,7 +58,8 @@ class EnquiryFile(models.Model):
     )
 
     file = models.FileField(
-        upload_to="enquiries/"
+        upload_to="enquiries/",
+        storage=MediaCloudinaryStorage()
     )
 
     uploaded_at = models.DateTimeField(
