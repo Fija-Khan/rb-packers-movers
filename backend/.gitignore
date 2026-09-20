@@ -1,6 +1,8 @@
-.env
-venv/
-__pycache__/
-*.pyc
+# Django local files
 db.sqlite3
-media/
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Environment variables
+.env
