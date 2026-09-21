@@ -1,0 +1,6 @@
+text id="z7p3rm"
+User-agent: *
+Allow: /
+
+Sitemap: https://rb-packers-movers.vercel.app/sitemap.xml
+
