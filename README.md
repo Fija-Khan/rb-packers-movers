@@ -1,16 +1,51 @@
-# React + Vite
+# RB Packers & Movers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack business website developed for **RB Packers & Movers** to showcase their services and allow customers to submit moving and packing enquiries online.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Responsive business website
+* Home, About, Services and Contact sections
+* Get Free Quote enquiry form
+* Pickup and drop location details
+* File upload functionality
+* Django admin panel for managing enquiries
+* WhatsApp integration
+* Google Maps integration
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Frontend**
 
-## Expanding the ESLint configuration
+* React.js
+* JavaScript
+* HTML5
+* CSS3
+* Bootstrap
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Backend**
+
+* Python
+* Django
+* Django REST Framework
+* PostgreSQL
+
+## 📁 Project Structure
+
+```text
+RB-Packers-Movers/
+├── frontend/
+└── backend/
+```
+
+## 🌐 Live Website
+
+https://rb-packers-movers.vercel.app/
+
+## 💻 GitHub Repository
+
+https://github.com/Fija-Khan/rb-packers-movers
+
+## 📌 Project Purpose
+
+This project was developed as a real-world business website to provide an online presence for RB Packers & Movers and make customer enquiry management easier.
